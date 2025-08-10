@@ -3,34 +3,116 @@
   <head>
     <meta charset="utf-8">
     <title>Jeff's Grill</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        background-color: #f8f8f8;
+        color: #333;
+      }
+
+      header {
+        text-align: left;
+        background-color: #b71c1c;
+        padding: 20px;
+      }
+
+      header img {
+        border-radius: 10px;
+      }
+
+      header h1 {
+        color: white;
+        margin: 10px 0;
+      }
+
+      nav a {
+        color: white;
+        text-decoration: none;
+        margin: 0 15px;
+        font-size: 18px;
+      }
+
+      section {
+        padding: 20px;
+        text-align: center;
+      }
+
+      h2 {
+        color: #b71c1c;
+      }
+
+      section img {
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      }
+
+      .price {
+        color: #388e3c;
+      }
+
+      #order-form {
+        background-color: #fff3e0;
+        border-top: 3px solid #b71c1c;
+      }
+
+      form {
+        max-width: 400px;
+        margin: auto;
+        padding: 20px;
+      }
+
+      input[type="number"], textarea {
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+
+      input[type="submit"] {
+        background-color: #b71c1c;
+        color: white;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        width: 100%;
+      }
+
+      footer {
+        background-color: #333;
+        color: white;
+        text-align: center;
+        padding: 10px;
+      }
+    </style>
   </head>
-  <body style="font-family: Arial, sans-serif; margin: 0; background-color: #f8f8f8; color: #333;">
+  <body>
 
     <!-- Header -->
-    <header style="text-align: left; background-color: #b71c1c; padding: 20px;">
+    <header>
       <img id="header-img"
            src="https://sdmntprnorthcentralus.oaiusercontent.com/files/00000000-7be0-622f-8628-959b2febec52/raw?se=2025-08-10T00%3A09%3A14Z&sp=r&sv=2024-08-04&sr=b&scid=6c71b982-2853-5dbe-b62a-b8b63f7e874f&skoid=e9d2f8b1-028a-4cff-8eb1-d0e66fbefcca&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-08-09T16%3A05%3A13Z&ske=2025-08-10T16%3A05%3A13Z&sks=b&skv=2024-08-04&sig=BK41fNMJCJdigmwGmBUpbJXyguMRUWqOyI4iJKnvRlA%3D"
            alt="header-image"
-           width="200" height="100"
-           style="border-radius: 10px;">
-      <h1 style="color: white; margin:left ">Jeff's Grill</h1>
+           width="200" height="100">
+      <h1>Jeff's Grill</h1>
       <nav>
-        <a href="#menu" style="color: white; text-decoration: none; margin: 0 15px; font-size: 18px;">Menu</a>
-        <a href="#order-form" style="color: white; text-decoration: none; margin: 0 15px; font-size: 18px;">Order Form</a>
+        <a href="#menu">Menu</a>
+        <a href="#order-form">Order Form</a>
       </nav>
     </header>
 
     <!-- Menu Section -->
-    <section id="menu" style="padding: 20px; text-align: center;">
-      <h2 style="color: #b71c1c;">Menu</h2>
+    <section id="menu">
+      <h2>Menu</h2>
 
       <h3>Pork Grill</h3>
       <img src="https://s3.amazonaws.com/yummy_uploads2/blog/9597.jpg"
            alt="Pork Skewers"
-           width="500" height="400"
-           style="border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
-      <h3 style="color: #388e3c;">₱180</h3>
-      <p style="max-width: 600px; margin: auto;">
+           width="500" height="400">
+      <h3 class="price">₱180</h3>
+      <p>
         A hearty Filipino <i>PORK STEW</i> slow-cooked in a rich, savory broth with fresh vegetables and traditional spices.
         Perfect for those craving comfort food with a local twist.
       </p>
@@ -38,22 +120,20 @@
       <h3>Chicken Grill</h3>
       <img src="https://images.yummy.ph/yummy/uploads/2013/09/04-2013_yummy-ph_recipe_image_sari-jorges-chicken-inasal_main-1.jpg"
            alt="Chicken Inasal"
-           width="500" height="400"
-           style="border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
-      <h3 style="color: #388e3c;">₱280</h3>
-      <p style="max-width: 600px; margin: auto;">
+           width="500" height="400">
+      <h3 class="price">₱280</h3>
+      <p>
         Juicy chicken grilled known as <i>INASAL</i> to perfection, marinated in a blend of garlic, calamansi, and local spices for a smoky, savory flavor.
         Served with a side of fresh vegetables.
       </p>
     </section>
 
     <!-- Order Form -->
-    <section id="order-form" style="padding: 20px; background-color: #fff3e0; border-top: 3px solid #b71c1c;">
-      <form action="index.html" method="post" style="max-width: 400px; margin: auto; padding: 20px;">
-        <h2 style="color: #b71c1c; text-align: center;">Place Your Order</h2>
+    <section id="order-form">
+      <form action="index.html" method="post">
+        <h2>Place Your Order</h2>
 
-        <input type="number" name="pieces" id="pieces" placeholder="No. of pieces" min="1" step="1" required
-               style="width: 100%; padding: 10px; margin: 10px 0; border: 1px solid #ccc; border-radius: 5px;">
+        <input type="number" name="pieces" id="pieces" placeholder="No. of pieces" min="1" step="1" required>
 
         <label><b>Sides</b></label><br>
         <input type="radio" name="side" value="Ensalada"> Ensalada<br>
@@ -61,16 +141,14 @@
         <input type="radio" name="side" value="Chicken Oil"> Chicken Oil<br><br>
 
         <label for="request"><b>Request</b></label>
-        <textarea id="request" name="request" rows="4" cols="50"
-                  style="width: 100%; padding: 10px; margin: 10px 0; border: 1px solid #ccc; border-radius: 5px;"></textarea>
+        <textarea id="request" name="request" rows="4" cols="50"></textarea>
 
-        <input type="submit" value="Go to Checkout"
-               style="background-color: #b71c1c; color: white; padding: 10px 15px; border: none; border-radius: 5px; cursor: pointer; width: 100%;">
+        <input type="submit" value="Go to Checkout">
       </form>
     </section>
 
     <!-- Footer -->
-    <footer style="background-color: #333; color: white; text-align: center; padding: 10px;">
+    <footer>
       <p>Made with love by @EngrJeff</p>
     </footer>
 
